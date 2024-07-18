@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts" xmlns:DTS:ObjectModel="www.microsoft.com/SqlServer/Dts/ObjectModel">
+  <!-- Define seu pacote SSIS para extrair dados do sistema ERP -->
+  <DTS:Executable Name="ExtractFromERP" ...>
+    <!-- Configuração da conexão com o ERP e extração de dados -->
+    <DTS:Connection Managers>
+      <DTS:Connection Manager ... />
+    </DTS:Connection Managers>
+    <DTS:Tasks>
+      <DTS:Data Flow Task ...>
+        <DTS:Transformations>
+          <DTS:OLE DB Source ...>
+            <DTS:SQLCommand>SELECT * FROM ERP_Data</DTS:SQLCommand>
+          </DTS:OLE DB Source>
+          <DTS:OLE DB Destination ...>
+            <DTS:DestinationTable>RawData_ERP</DTS:DestinationTable>
+          </DTS:OLE DB Destination>
+        </DTS:Transformations>
+      </DTS:Data Flow Task>
+    </DTS:Tasks>
+  </DTS:Executable>
+</DTS:Executable>

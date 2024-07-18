@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts" xmlns:DTS:ObjectModel="www.microsoft.com/SqlServer/Dts/ObjectModel">
+  <!-- Define seu pacote SSIS para extrair dados de uma API -->
+  <DTS:Executable Name="ExtractFromAPI" ...>
+    <!-- Configuração da conexão com a API e extração de dados -->
+    <DTS:Connection Managers>
+      <DTS:Web Service Connection Manager ... />
+    </DTS:Connection Managers>
+    <DTS:Tasks>
+      <DTS:Data Flow Task ...>
+        <DTS:Transformations>
+          <DTS:Web Service Source ...>
+            <DTS:ServiceURL>https://api.example.com/data</DTS:ServiceURL>
+          </DTS:Web Service Source>
+          <DTS:OLE DB Destination ...>
+            <DTS:DestinationTable>RawData_API</DTS:DestinationTable>
+          </DTS:OLE DB Destination>
+        </DTS:Transformations>
+      </DTS:Data Flow Task>
+    </DTS:Tasks>
+  </DTS:Executable>
+</DTS:Executable>

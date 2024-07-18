@@ -1,0 +1,23 @@
+default: &default
+  adapter: sqlserver
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: audit_development
+  username: your_username
+  password: your_password
+
+test:
+  <<: *default
+  database: audit_test
+  username: your_username
+  password: your_password
+
+production:
+  <<: *default
+  database: audit_production
+  username: your_username
+  password: your_password

@@ -1,0 +1,11 @@
+development:
+  erp_api_key: your_erp_api_key
+  other_api_key: your_other_api_key
+
+test:
+  erp_api_key: your_erp_api_key
+  other_api_key: your_other_api_key
+
+production:
+  erp_api_key: your_erp_api_key
+  other_api_key: your_other_api_key

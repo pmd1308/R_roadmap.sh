@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts" xmlns:DTS:ObjectModel="www.microsoft.com/SqlServer/Dts/ObjectModel">
+  <!-- Define seu pacote SSIS para extrair dados de arquivos CSV -->
+  <DTS:Executable Name="ExtractFromCSV" ...>
+    <!-- Configuração da conexão com o arquivo CSV e extração de dados -->
+    <DTS:Connection Managers>
+      <DTS:Flat File Connection Manager ... />
+    </DTS:Connection Managers>
+    <DTS:Tasks>
+      <DTS:Data Flow Task ...>
+        <DTS:Transformations>
+          <DTS:Flat File Source ...>
+            <DTS:FilePath>csvfile.csv</DTS:FilePath>
+          </DTS:Flat File Source>
+          <DTS:OLE DB Destination ...>
+            <DTS:DestinationTable>RawData_CSV</DTS:DestinationTable>
+          </DTS:OLE DB Destination>
+        </DTS:Transformations>
+      </DTS:Data Flow Task>
+    </DTS:Tasks>
+  </DTS:Executable>
+</DTS:Executable>
